@@ -4,9 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script>
+        console.log($);
+
+    </script>
     <title>인터렉션</title>
 </head>
 <body>
     <h1>안녕하세요!!</h1>
+    <ul class="hi">
+        <li class="my">하나</li>
+        <li class="name">두울</li>
+        <li class="is">새앳</li>
+        <li class="jonghyeon">네엣</li>
+    </ul>
 </body>
+<script>
+    //돔 엘리먼트 활용
+    console.log($('.hi')); //제이쿼리로 값 찾기
+    console.log($('.hi li')); //제이쿼리로 값 찾기
+    console.log("-----------------------");
+    console.log($('.hi').children()); //해당 선택 태그의 자식들 찾기
+    console.log($('.hi').children().parent()); // 해당 선택 태그의 자식에 부모 찾기
+    console.log($('.hi').find('li'));
+    console.log("-----------------------");
+    // $('.hi li').on('click', function() {
+    //     var index = $('.hi li').index(this);
+    //     console.log(index);
+    // })
+
+    $('.hi li').eq(1).fadeOut(500); // 0.5초 후 모습이 점점 사라지며 디스플레이를 none 시키는 애니메이션
+    $('.hi li').eq(1).fadeIn(500);
+
+    // $('.hi li').eq(1).hide(500);
+    // $('.hi li').eq(1).show(500);
+
+    // $('.hi li').eq(1).slideUp(500);
+    // $('.hi li').eq(1).slideDown(500);
+</script>
 </html>
